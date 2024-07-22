@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';">
+<title>Custom Timer with Progress Bar</title>
+<link rel="stylesheet" href="styles.css"> <!-- 引入CSS样式 -->
+</head>
+<body>
+<div class="timer-container">
+
+    <div class="events-title">
+    </div>
+
+    <div class="during-setting">
+        <label for="startTimeInput" style="white-space: nowrap;">Start Time:</label>
+        <input type="time" id="startTimeInput" value="00:00">
+        <label for="endTimeInput" style="white-space: nowrap;">End Time:</label>
+        <input type="time" id="endTimeInput" value="23:59">
+        <button id="setTimerRange">Set Time Range</button>
+    </div>
+
+    <div class="timer-self">
+        <div id="currentTimeDisplay"></div>
+        <br>
+        <div class="progress-bar">
+            <div class="current-time-marker"></div>
+            <div class="event-marker"></div>
+        </div>    
+    </div>
+    <hr />
+
+    <div>
+        <label for="eventNameInput">Event Name:</label>
+        <input type="text" id="eventNameInput" value="Event Title">
+        <br>
+        <label for="eventStartTimeInput">Start Time:</label>
+        <input type="time" id="eventStartTimeInput" value="22:00">
+        <label for="eventEndTimeInput">End Time:</label>
+        <input type="time" id="eventEndTimeInput" value="22:10">
+        <button id="addEvent">Add Event</button>
+    </div>
+    <br>
+    <button id="clearEvents">clear Events</button>
+</div>
+
+
+<br>
+<hr />
+
+<div class="doingLog">
+    <h2>Doing Log</h2>
+    <div class="doingLogControllor">
+        <button id="clearDoingLog">Clear Doing Log</button>
+        <label for="askIntervalInput">Ask Interval:</label>
+        <input type="number" id="askIntervalInput" value="500">
+        <br>
+        <label for="ifAskDoing">Ask for Doing:</label>
+        <input type="checkbox" id="ifAskDoing">
+        <br>
+    </div> 
+    <ul id="doingLogList">
+    </ul>
+</div>
+
+<script src="script.js"></script> <!-- 引入JavaScript脚本 -->
+</body>
+</html>
